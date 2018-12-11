@@ -1,14 +1,6 @@
 # meyan
 API Server Performance
 
-### Cấu trúc thư mục
-
-> server
->  |-app
->  |-models
->  |-routes
->  |-sockets
-> start.js
 
 ### Cài đặt và chạy
 
@@ -32,7 +24,7 @@ $ npm run pm2
 ### Tùy chỉnh Config
 > Chỉnh sửa tại: server/app/config.js
 
-### Thư mục Models (MongoDB)
+### Thư mục Models (MongoDB) - (server/models)
 
 Ví dụ tạo 1 file 'test.js' mặc định như sau:
 ```sh
@@ -48,10 +40,16 @@ Và chúng ta có giao thức để gọi với mongoose ví dụ:
   db.test.find({}).then(data => ...)
 ```
 Bạn có thể tạo nhiều model. Mỗi file js bạn tạo sẽ tương ứng với 1 model trong mongodb
-Khi tôi đặt tên file là test.js => tôi sẽ phải gọi kết nối db.test
-Tương tự tên file là user.js => db.user
+Khi tôi đặt tên file là test.js => tôi sẽ phải gọi kết nối:
+```sh
+db.test
+```
+Tương tự tên file là user.js:
+```sh
+db.user
+```
 
-### Thư mục Routes
+### Thư mục Routes (server/routes)
 
 Ví dụ tạo 1 file 'index.js' mặc định như sau:
 ```sh
@@ -78,7 +76,7 @@ Và chúng ta truy cập: http://localhost:3000/user sẽ cho ra kết quả 'Us
 
 Bạn có thể tạo nhiều model. Mỗi file js bạn tạo sẽ tương ứng với 1 model trong mongodb
 
-### Thư mục Sockets (socket.io)
+### Thư mục Sockets (socket.io) - (server/sockets)
 
 Ví dụ tạo 1 file 'index.js' mặc định như sau:
 ```sh
