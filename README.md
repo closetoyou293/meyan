@@ -3,12 +3,12 @@ API Server Performance
 
 ### Cấu trúc thư mục
 
-server
-  |-app
-  |-models
-  |-routes
-  |-sockets
-start.js
+> server
+>  |-app
+>  |-models
+>  |-routes
+>  |-sockets
+> start.js
 
 ### Cài đặt và chạy
 
